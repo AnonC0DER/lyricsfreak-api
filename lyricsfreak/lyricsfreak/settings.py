@@ -1,8 +1,7 @@
 from pathlib import Path
 import os
-# Configure Django App for Heroku.
 import django_heroku
-django_heroku.settings(locals())
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,3 +119,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
